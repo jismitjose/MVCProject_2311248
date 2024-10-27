@@ -6,4 +6,52 @@
     <h3 class="display-4">Welcome to Movie Ticket Counter</h3>
     <p>We offer premium event tickets for exclusive shows, concerts, and performances at renowned theaters. Book your seat and experience unforgettable moments.</p>
     <img src="~/images/logo.png" alt="Company Logo" class="img-fluid" style="max-width: 200px; margin-top: 20px;" />
+    @{
+
+        decimal amount = 27.99m; // numeric value contains amount 
+        DateTime salesDate = new DateTime(2024, 10, 02); // date variable with value
+        string city = "Québec"; // city variable with value
+        string message = "";
+        // array of 5 different cars
+        string[] cars = { "Volvo", "Cadillac", "Audi", "Buick", "Chevrolet" }; //
+
+        <table>
+                <tr>
+                    <th>My Cars</th>
+                </tr>
+            <tbody>
+                @foreach (var brand in cars)
+                {
+                    <tr>
+                        <td>@brand</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+
+        @if (cars.Length >= 4)
+        {
+            <img src="~/images/thumsup.png" alt="Thumb Up" width="50" height="50" />
+        }
+        else
+        {
+            <img src="~/images/thumbsdown.png" alt="Thumb Down" width="50" height="50" />
+        }
+
+        // switch case to set the message based on the city
+        <br />
+        switch (city)
+        {
+            case "Montreal" :
+                message = $"You live in {city}";
+                break;
+            case "Québec":
+                message = $"Please bring ${amount} before the {salesDate}";
+                break;
+        } 
+    }
+    <div class="center-message">
+        <p>@message</p>
+    </div>
 </div>

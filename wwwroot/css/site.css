@@ -13,6 +13,25 @@ body {
     color: #333; /* Dark gray text color */
     font-family: Arial, sans-serif;
 }
+
+table {
+    width: 25%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+.center-message{
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ff0000;
+}
 html {
   font-size: 14px;
 }
